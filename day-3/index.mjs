@@ -1,4 +1,4 @@
-import { add, readFileLines } from "../helpers/helpers.mjs";
+import { add, readFileLines, readFromUrl } from "../helpers/helpers.mjs";
 
 const input = await readFileLines('./day-3/input.txt')
 var priorityMap = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -57,3 +57,5 @@ function unpackItems (item) {
 function getCommonItem3 ([elf1, elf2, elf3]) {
     return elf1.find(item => elf2.includes(item) && elf3.includes(item))
 }
+
+readFromUrl('https://adventofcode.com/2022/day/3/input')

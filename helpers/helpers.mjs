@@ -9,6 +9,11 @@ export async function readFileLines(path) {
     return content.split('\n');
 }
 
+export async function readFromUrl(path) {
+    const content = await fetch(path).then(res => res.text());
+    console.log(content);
+}
+
 export function add(a, b) {
     return a + b;
 }
