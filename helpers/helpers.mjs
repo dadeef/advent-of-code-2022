@@ -17,3 +17,11 @@ export async function readFromUrl(path) {
 export function add(a, b) {
     return a + b;
 }
+
+export function findFirstElement(arr, predicate){
+    const [el, ...rest] = arr;
+    if(predicate(el)){
+        return el;
+    }
+    return findFirstElement(rest, predicate);
+}
